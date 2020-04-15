@@ -15,6 +15,18 @@ const baseTheme = createMuiTheme({
     },
     typography: {
         fontFamily: "Lato",
+
+        h1: {
+            fontSize: 50,
+        },
+
+        h2: {
+            fontSize: 30
+        },
+
+        subtitle1: {
+            fontSize: 25
+        }
     },
 });
 

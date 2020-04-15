@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import {
-    Grid
+    Grid,
+    Typography
 } from "@material-ui/core";
 
 class Resume extends Component {
@@ -9,9 +10,9 @@ class Resume extends Component {
 
         return (
             <div className="container-fluid">
-            <Grid container direction="column" justify="center" alignItems="center">
-                <h3>Resume</h3>
-            </Grid>
+                <Grid container direction="column" justify="center" alignItems="center">
+                    <Typography variant="h2">Resume</Typography>
+                </Grid>
             </div>
         );
     }

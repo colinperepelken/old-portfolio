@@ -10,15 +10,16 @@ import { theme } from "../../theme";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
-    copyrightLogo: {
-        fontSizeInherit: "1rem"
-    },
+    toBottom: {
+        position: "absolute",
+        bottom: 0
+    }
   }));
 
 function Footer() {
     const classes = useStyles(theme);
     return (
-        <Grid container direction="column" justify="center" alignItems="center">
+        <Grid container direction="column" justify="center" alignItems="center" className={classes.toBottom}>
             <p><i>Copyright <Copyright fontSize="inherit" /> {new Date().getFullYear()} Colin Perepelken</i></p>
         </Grid>
     );

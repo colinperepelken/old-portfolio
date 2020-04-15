@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {
-    Grid
+    Grid,
+    Typography
 } from "@material-ui/core";
 class About extends Component {
     render() {
         return (
             <Grid container direction="column" justify="center" alignItems="center">
-                <h3>About</h3>
+                <Typography variant="h2">About</Typography>
             </Grid>
         );
     }

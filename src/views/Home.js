@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import {
-    Grid
+    Grid, Typography
 } from "@material-ui/core";
 
 import { theme } from "../theme";
 import { makeStyles } from "@material-ui/core/styles";
 
-import backgroundImage from '../assets/chris-barbalis-9zIF7YWPmUM-unsplash.jpg';
+import backgroundImage from '../assets/paul-gilmore-KT3WlrL_bsg-unsplash.jpg';
 
 const useStyles = makeStyles(theme => ({
     mainImage: {
       backgroundImage: `url(${backgroundImage})`,
-      minHeight: "400px",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      height: "40vh"
+    },
+    subtitle: {
+        marginTop: 0,
     }
   }));
 
@@ -19,8 +24,8 @@ function Home() {
     const classes = useStyles(theme);
     return (
         <Grid container direction="column" justify="center" alignItems="center" className={classes.mainImage}>
-            <h1>Colin Perepelken</h1>
-            <h2>Software Developer</h2>
+            <Typography variant="h1">Colin Perepelken</Typography>
+            <Typography variant="subtitle1" className={classes.subtitle}>Software Developer</Typography>
         </Grid>
     );
 }
