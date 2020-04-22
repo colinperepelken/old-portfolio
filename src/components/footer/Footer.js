@@ -11,8 +11,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
     toBottom: {
-        position: "absolute",
-        bottom: 0
+        // position: "absolute",
+        // bottom: 0
     }
   }));
 

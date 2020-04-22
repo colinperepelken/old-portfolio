@@ -13,9 +13,13 @@ import { theme } from "./theme";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
   mainContainer: {
     backgroundColor: "#6a6d73",
     height: "100vh",
+    overflow: "auto"
   }
 }));
 
@@ -23,7 +27,7 @@ function App() {
   const classes = useStyles(theme);
 
   return (
-    <div className="App">
+    <div className={classes.fop}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <div className={classes.mainContainer}>
