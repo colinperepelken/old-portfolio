@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
     Grid, Typography
 } from "@material-ui/core";
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     }
   }));
 
-function Home() {
+const Home = () => {
     const classes = useStyles(theme);
     return (
         <Grid container direction="column" justify="center" alignItems="center" className={classes.mainImage}>

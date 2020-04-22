@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { Copyright } from "@material-ui/icons";
 
@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     }
   }));
 
-function Footer() {
+const Footer = () => {
     const classes = useStyles(theme);
     return (
         <Grid container direction="column" justify="center" alignItems="center" className={classes.toBottom}>

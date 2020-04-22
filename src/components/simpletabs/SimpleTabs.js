@@ -12,7 +12,7 @@ import Resume from '../../views/Resume';
 import ProjectList from '../../views/ProjectList';
 import About from '../../views/About';
 
-function TabPanel(props) {
+const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
 
   return (
@@ -35,7 +35,7 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
-function a11yProps(index) {
+const a11yProps = (index) => {
   return {
     id: `scrollable-prevent-tab-${index}`,
     'aria-controls': `scrollable-prevent-tabpanel-${index}`,
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleTabs() {
+const SimpleTabs = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -91,3 +91,5 @@ export default function SimpleTabs() {
     </div>
   );
 }
+
+export default SimpleTabs;

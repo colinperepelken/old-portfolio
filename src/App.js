@@ -23,11 +23,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function App() {
+const App = () => {
   const classes = useStyles(theme);
 
   return (
-    <div className={classes.fop}>
+    <div className={classes.root}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <div className={classes.mainContainer}>
