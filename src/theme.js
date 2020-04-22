@@ -28,6 +28,7 @@ const baseTheme = createMuiTheme({
             fontSize: 25
         }
     },
+    spacing: 8
 });
 
 const theme = responsiveFontSizes(baseTheme);

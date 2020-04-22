@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   mainContainer: {
     backgroundColor: "#6a6d73",
     height: "100vh",
-    overflow: "auto"
+    overflow: "auto",
   }
 }));
 
