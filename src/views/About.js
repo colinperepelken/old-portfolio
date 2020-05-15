@@ -3,7 +3,7 @@ import {
     Grid,
     Typography,
     Link,
-    Box
+    Box,
 } from "@material-ui/core";
 
 import profileImage from '../assets/bike_profile.jpg';
@@ -13,8 +13,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
     profileImage: {
-        width: "90%",
-        maxWidth: "500px"
+        width: "100%",
+        height: "auto",
+        maxWidth: "600px",
+        borderRadius: "1%",
     },
     root: {
         flexGrow: 1,
@@ -34,7 +36,7 @@ const About = () => {
                             <Typography align="center" variant="h2" mb={4}>About</Typography>
                         </Box>
                     </Grid>
-                    <Grid container justify="center" item xs={12} sm={6}>
+                    <Grid container justify="center" alignItems="center" item xs={12} sm={6}>
                         <img className={classes.profileImage} src={profileImage} alt="Picture of Colin" />
                     </Grid>
                     <Grid item xs={12} sm={6}>
