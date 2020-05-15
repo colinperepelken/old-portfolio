@@ -5,7 +5,8 @@ import {
     Box,
     TextField,
     Button,
-    Container
+    Container,
+    Paper
 } from "@material-ui/core"; 
 
 import { theme } from "../theme";
@@ -15,8 +16,12 @@ const useStyles = makeStyles(theme => ({
     textField: {
         marginBottom: theme.spacing(1),
     },
-    submitBtn: {
-        textAlign: "center",
+    paper: {
+        backgroundColor: "#424242",
+        padding: theme.spacing(2),
+    },
+    description : {
+        opacity: 0.7
     }
 }));
 
@@ -37,15 +42,18 @@ const Contact = () => {
                 </Box>
             </Grid>
             <Grid item container direction="column" justify="center" alignItems="center" xs={12}>
-                <Box mb={4}>
-                    <Typography>If you have any questions about my work, or just want to chat, send me a message using the form below and I'll do my best to respond soon.</Typography>
-                </Box>
-                <form onSubmit={handleSubmit}>
-                    <TextField fullWidth name="name" color="secondary" className={classes.textField} label="Your name" variant="filled" required />
-                    <TextField fullWidth name="email" color="secondary" className={classes.textField} label="Your email address" variant="filled" required />
-                    <TextField fullWidth name="message" color="secondary" className={classes.textField} label="Message" variant="filled" multiline rows={6} required />
-                    <Button className={classes.submitBtn} variant="contained" color="secondary">Submit</Button>
-                </form>
+                <Paper elevation={2} className={classes.paper}>
+                    <Box mb={4}>
+                        <Typography className={classes.description}>If you have any questions about my work, or just want to chat, send me a message using the form below and I'll respond as soon as possible.</Typography>
+                    </Box>
+                    <form onSubmit={handleSubmit}>
+                        <TextField fullWidth name="name" color="secondary" className={classes.textField} label="Your name" variant="filled" required />
+                        <TextField fullWidth name="email" color="secondary" className={classes.textField} label="Your email address" variant="filled" required />
+                        <TextField fullWidth name="message" color="secondary" className={classes.textField} label="Message" variant="filled" multiline rows={6} required />
+                        <Button variant="contained" color="secondary">Submit</Button>
+                    </form>
+                </Paper>
+
             </Grid>
         </Grid>
     );
