@@ -1,13 +1,52 @@
 import React, { Component } from 'react';
 import {
     Grid,
-    Typography
+    Typography,
+    Box,
+    TextField,
+    Button,
+    Container
 } from "@material-ui/core"; 
 
+import { theme } from "../theme";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+    textField: {
+        marginBottom: theme.spacing(1),
+    },
+    submitBtn: {
+        textAlign: "center",
+    }
+}));
+
 const Contact = () => {
+    const classes = useStyles(theme);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        window.console.log('Submitted!!!');
+    };
+
+
     return (
         <Grid container direction="column" justify="center" alignItems="center">
-            <Typography variant="h2">Contact</Typography>
+            <Grid item xs={12}>
+                <Box mb={2}>
+                    <Typography variant="h2">Contact</Typography>
+                </Box>
+            </Grid>
+            <Grid item container direction="column" justify="center" alignItems="center" xs={12}>
+                <Box mb={4}>
+                    <Typography>If you have any questions about my work, or just want to chat, send me a message using the form below and I'll do my best to respond soon.</Typography>
+                </Box>
+                <form onSubmit={handleSubmit}>
+                    <TextField fullWidth name="name" color="secondary" className={classes.textField} label="Your name" variant="filled" required />
+                    <TextField fullWidth name="email" color="secondary" className={classes.textField} label="Your email address" variant="filled" required />
+                    <TextField fullWidth name="message" color="secondary" className={classes.textField} label="Message" variant="filled" multiline rows={6} required />
+                    <Button className={classes.submitBtn} variant="contained" color="secondary">Submit</Button>
+                </form>
+            </Grid>
         </Grid>
     );
 }
