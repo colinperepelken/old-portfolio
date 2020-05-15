@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   mainContainer: {
-    backgroundColor: "#6a6d73",
     height: "100vh",
     overflow: "auto",
   }

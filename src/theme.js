@@ -8,10 +8,7 @@ const baseTheme = createMuiTheme({
         secondary : {
             main: "#42a5f5",
         },
-        text: {
-            primary: "#fafafa",
-            secondary: "#fafafa",
-        },
+        type: 'dark',
     },
     typography: {
         fontFamily: "Lato",

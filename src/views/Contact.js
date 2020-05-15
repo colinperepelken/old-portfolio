@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
         marginBottom: theme.spacing(1),
     },
     paper: {
-        backgroundColor: "#424242",
         padding: theme.spacing(2),
     },
     description : {
