@@ -19,9 +19,6 @@ const useStyles = makeStyles(theme => ({
     paper: {
         padding: theme.spacing(2),
     },
-    description : {
-        opacity: 0.7
-    }
 }));
 
 const Contact = () => {
@@ -43,7 +40,7 @@ const Contact = () => {
             <Grid item container direction="column" justify="center" alignItems="center" xs={12}>
                 <Paper elevation={2} className={classes.paper}>
                     <Box mb={4}>
-                        <Typography className={classes.description}>If you have any questions about my work, or just want to chat, send me a message using the form below and I'll respond as soon as possible.</Typography>
+                        <Typography color="textSecondary">If you have any questions about my work, or just want to chat, send me a message using the form below and I'll respond as soon as possible.</Typography>
                     </Box>
                     <form onSubmit={handleSubmit}>
                         <TextField fullWidth name="name" color="secondary" className={classes.textField} label="Your name" variant="filled" required />

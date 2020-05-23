@@ -1,15 +1,253 @@
 import React from 'react';
 import {
     Grid,
-    Typography
+    Typography,
+    Paper,
+    Box,
+    Button,
+    Icon
 } from "@material-ui/core";
 
+import { theme } from "../theme";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+    sectionHeading: {
+        borderBottomWidth: "4px",
+        borderBottomStyle: "solid",
+        borderBottomColor: theme.palette.secondary.main,
+    },
+    [theme.breakpoints.up('sm')]: {
+        resumeBox: {
+            maxWidth: "1100px",
+            marginLeft: "auto",
+            marginRight: "auto"
+        }
+    },
+    resumeDate: {
+        fontStyle: "italic",
+        position: "absolute",
+        right: "10px",
+        fontSize: ".7rem",
+        color: theme.palette.secondary.main,
+    },
+    resumeList: {
+        marginRight: "7rem"
+    },
+    resumeContent: {
+        position: "relative"
+    }
+}));
+
 const Resume = () => {
+
+    const classes = useStyles(theme);
+
     return (
         <div className="container-fluid">
-            <Grid container direction="column" justify="center" alignItems="center">
-                <Typography variant="h2">Resume</Typography>
+            <Grid container spacing={3}>
+                <Grid item xs={12}>
+                    <Typography variant="h2" align="center">Resume</Typography>
+                </Grid>
             </Grid>
+            <Box mt={3}>
+                <Grid container>
+                    <Grid item xs={2}>
+                        <Paper>
+                            <Box p={4}>
+                                <Typography variant="h5" component="h3">Quick access</Typography>
+                                <ul>
+                                    <li>Most recent reference</li>
+                                    <li>Education</li>
+                                    <li>Work experience</li>
+                                    <li>Leadership &amp; teamwork</li>
+                                </ul>
+                                <Button variant="contained" color="secondary">
+                                    <Icon className="fas fa-download" fontSize="small" style={{marginRight: "1rem"}}></Icon>
+                                    Download resume
+                                </Button>
+                            </Box>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={10}>
+                        <Box className={classes.resumeBox}>
+                        <Box mb={3}>
+                            <Grid container spacing={3}>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.sectionHeading} variant="h5" component="h3">
+                                        Most recent reference
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Paper elevation={3} className={classes.resumeContent}>
+                                        <Box p={2}>
+                                            <Typography component="p" color="textSecondary">
+                                                “Colin has been doing a fantastic job for WCLearningNetwork. His work has mainly
+                                                focused on building educational games (HTML5) and developing Moodle plugins
+                                                (php/mysql). Colin has jumped into his work with great attention to detail as well as
+                                                excellent creativity when needed. I would definitely recommend Colin as a solid employee
+                                                who is self-motivated, smart, and dependable. I realize that with his graduation coming, I'll
+                                                likely lose him this year. Given that, WCLN has definitely benefited from his work.”
+                                            </Typography>
+                                        </Box>
+                                    </Paper>
+                                </Grid>
+                            </Grid>
+                        </Box>
+
+                        <Box mb={3}>
+                            <Grid container spacing={3}>
+                                <Grid item xs={12}>
+                                        <Typography className={classes.sectionHeading} variant="h5" component="h3">
+                                            Education
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Paper elevation={3} className={classes.resumeContent}>
+                                            <Box p={2}>
+                                            <Typography variant="h6" component="h4">
+                                                BSc, Major in Computer Science, Minor in Mathematics
+                                            </Typography>
+                                            <Typography variant="h7" component="h5">
+                                                The University of British Columbia <span className={classes.resumeDate}>2014 - 2018</span>
+                                            </Typography>
+                                                <Typography component="p" color="textSecondary">
+                                                    <ul className={classes.resumeList}>
+                                                        <li>Vice-President of the Quantitative Sciences Course Union <span className={classes.resumeDate}>2017 - 2018</span></li>
+                                                        <li>Internal Coordinator of the Quantitative Sciences Course Union <span className={classes.resumeDate}>2016 - 2017</span></li>
+                                                        <li>Dean's List <span className={classes.resumeDate}>2015</span></li>
+                                                    </ul>
+                                                </Typography>
+                                            </Box>
+                                        </Paper>
+                                    </Grid>
+                            </Grid>
+                        </Box>
+
+                        <Box mb={3}>
+                            <Grid container spacing={3}>
+                                <Grid item xs={12}>
+                                        <Typography className={classes.sectionHeading} variant="h5" component="h3">
+                                            Work experience
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Paper elevation={3} className={classes.resumeContent}>
+                                            <Box p={2}>
+                                                <Typography variant="h6" component="h4">
+                                                    Senior Software Developer
+                                                </Typography>
+                                                <Typography variant="h7" component="h5">
+                                                    Lingel Learning <span className={classes.resumeDate}>2019 - present</span>
+                                                </Typography>
+                                                <Typography component="p" color="textSecondary">
+                                                    <ul>
+                                                        <li>Moodle development (blocks, modules, themes, web services, etc...)</li>
+                                                        <li>Full-stack application development using the Laravel framework</li>
+                                                        <li>Integrating Moodle with other web applications using various authentication methods and APIs</li>
+                                                        <li>Managing software development projects end-to-end</li>
+                                                        <li>Using AWS, git version control, and Docker</li>
+                                                        <li>Providing support services for customer issues</li>
+                                                    </ul>
+                                                </Typography>
+                                            </Box>
+                                            <Box p={2}>
+                                                <Typography variant="h6" component="h4">
+                                                    Software Developer
+                                                </Typography>
+                                                <Typography variant="h7" component="h5">
+                                                    Western Canadian Learning Network <span className={classes.resumeDate}>2016 - present</span>
+                                                </Typography>
+                                                <Typography component="p" color="textSecondary">
+                                                    <ul>
+                                                        <li>Develop an LTI provider plugin to distribute course content to school districts across Western Canada. The provider handles millions of student requests for resources every year and has been integrated into Moodle, Canvas, and D2L</li>
+                                                        <li>Develop a Learning Object Repository (LOR) plugin to store and manage 3500+ games, projects, video tutorials, lessons and learning guides which can be embedded in courses</li>
+                                                        <li>Develop a Game Creator local plugin used by teachers to create 180+ games which are included in courses to help teach various concepts</li>
+                                                        <li>Develop 30+ educational HTML5/JavaScript games and media which are used by 51 BC school districts, the Yukon, and an Alberta division</li>
+                                                    </ul>
+                                                </Typography>
+                                            </Box>
+                                            <Box p={2}>
+                                                <Typography variant="h6" component="h4">
+                                                    Software Developer
+                                                </Typography>
+                                                <Typography variant="h7" component="h5">
+                                                    Latitude Geographics <span className={classes.resumeDate}>2018</span>
+                                                </Typography>
+                                                <Typography component="p" color="textSecondary">
+                                                    <ul>
+                                                        <li>Design and evelop customized web-GIS applications to client specifications using C#, .NET, and Typescript</li>
+                                                        <li>Write technical documentation and strict test cases to support software deployment</li>
+                                                    </ul>
+                                                </Typography>
+                                            </Box>
+                                            <Box p={2}>
+                                                <Typography variant="h6" component="h4">
+                                                    Undergraduate Academic Assistant
+                                                </Typography>
+                                                <Typography variant="h7" component="h5">
+                                                    Department of Creative Studies, UBC Okanagan <span className={classes.resumeDate}>2018</span>
+                                                </Typography>
+                                                <Typography component="p" color="textSecondary">
+                                                    <ul>
+                                                        <li>Create a GIS mapping project template and database to record significant project activities and knowledge that has been produced as a result of the Border Free Bees initiative</li>
+                                                    </ul>
+                                                </Typography>
+                                            </Box>
+                                            <Box p={2}>
+                                                <Typography variant="h6" component="h4">
+                                                    Undergraduate Research Assistant
+                                                </Typography>
+                                                <Typography variant="h7" component="h5">
+                                                    School of Engineering, UBC Okanagan <span className={classes.resumeDate}>2017</span>
+                                                </Typography>
+                                                <Typography component="p" color="textSecondary">
+                                                    <ul>
+                                                        <li>Extract features for the gas sensing project to better uniquely identify VOCs</li>
+                                                        <li>Perform statistical analysis on breath-analyzer data using MATLAB</li>
+                                                    </ul>
+                                                </Typography>
+                                            </Box>
+                                        </Paper>
+                                    </Grid>
+                            </Grid>
+                        </Box>
+
+                        <Box mb={3}>
+                            <Grid container spacing={3}>
+                                <Grid item xs={12}>
+                                        <Typography className={classes.sectionHeading} variant="h5" component="h3">
+                                            Leadership &amp; teamwork 
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Paper elevation={3} className={classes.resumeContent}>
+                                            <Box p={2}>
+                                                <Typography component="p" color="textSecondary">
+                                                    <ul className={classes.resumeList}>
+                                                        <li>Presented Git workshops <span className={classes.resumeDate}>2018, 2019, 2020</span></li>
+                                                        <li>Planned and organized $10,000 in funding to enable more than 20 UBC-O students to attend the Canadian Undergraduate Computer Science Conference and the Canadian Undergraduate Mathematics Conference <span className={classes.resumeDate}>2016, 2017</span></li>
+                                                        <li>Volunteered to promote computer science and math to high-school students through day-camps and visitations<span className={classes.resumeDate}>2017, 2018</span></li>
+                                                    </ul>
+                                                </Typography>
+                                            </Box>
+                                        </Paper>
+                                    </Grid>
+                            </Grid>
+                        </Box>
+
+                    </Box>
+
+                    <Box mt={2} align="center">
+                        <Button variant="contained" color="secondary">
+                            <Icon className="fas fa-download" fontSize="small" style={{marginRight: "1rem"}}></Icon>
+                            Download resume
+                        </Button>
+                    </Box>
+                    </Grid>
+                </Grid>
+
+            </Box>
         </div>
     );
 }

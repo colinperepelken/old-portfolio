@@ -37,7 +37,7 @@ const About = () => {
                         </Box>
                     </Grid>
                     <Grid container justify="center" alignItems="center" item xs={12} sm={6}>
-                        <img className={classes.profileImage} src={profileImage} alt="Picture of Colin" />
+                        <img className={classes.profileImage} src={profileImage} alt="Colin's face" />
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <Typography className={classes.aboutSection} align="center">
