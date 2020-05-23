@@ -63,7 +63,19 @@ const useStyles = makeStyles(theme => ({
 const Resume = () => {
 
     const classes = useStyles(theme);
-    
+
+    const skillsData = [
+        {src: phpImage, alt: "PHP logo"},
+        {src: moodleImage, alt: "Moodle logo"},
+        {src: dockerImage, alt: "Docker logo"},
+        {src: laravelImage, alt: "Laravel logo"},
+        {src: javaScriptImage, alt: "JavaScript logo"},
+        {src: gitImage, alt: "Git logo"},
+        {src: mysqlImage, alt: "MySQL logo"},
+        {src: reactImage, alt: "React logo"},
+        {src: pythonImage, alt: "Python logo"},
+    ];
+
     return (
         <div className="container-fluid">
             <Grid container spacing={3}>
@@ -279,33 +291,15 @@ const Resume = () => {
                                             <Paper elevation={3} className={classes.resumeContent}>
                                                 <Box p={2}>
                                                     <Grid container spacing={3} justify="center">
-                                                        <Grid item>
-                                                            <img className={classes.skillsImage} src={phpImage} alt="PHP logo"/>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <img className={classes.skillsImage} src={moodleImage} alt="Moodle logo"/>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <img className={classes.skillsImage} src={dockerImage} alt="Docker logo"/>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <img className={classes.skillsImage} src={laravelImage} alt="Laravel logo"/>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <img className={classes.skillsImage} src={javaScriptImage} alt="JavaScript logo"/>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <img className={classes.skillsImage} src={gitImage} alt="Git version control logo"/>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <img className={classes.skillsImage} src={mysqlImage} alt="MySQL logo"/>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <img className={classes.skillsImage} src={reactImage} alt="React logo"/>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <img className={classes.skillsImage} src={pythonImage} alt="Python logo"/>
-                                                        </Grid>
+
+                                                        {skillsData.map((skill) => {
+                                                            return (
+                                                                <Grid item>
+                                                                    <img className={classes.skillsImage} src={skill.src} alt={skill.alt}/>
+                                                                </Grid>
+                                                            );
+                                                        })}
+
                                                     </Grid>
                                                 </Box>
                                             </Paper>
