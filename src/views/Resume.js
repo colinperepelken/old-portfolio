@@ -13,6 +13,16 @@ import {
     Link
 } from "@material-ui/core";
 
+import phpImage from '../assets/php.png';
+import moodleImage from '../assets/moodle.png';
+import dockerImage from '../assets/docker.png';
+import laravelImage from '../assets/laravel.png';
+import javaScriptImage from '../assets/javascript.png';
+import gitImage from '../assets/git.png';
+import mysqlImage from '../assets/mysql.png';
+import reactImage from '../assets/react.png';
+import pythonImage from '../assets/python.png';
+
 import { theme } from "../theme";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -41,13 +51,19 @@ const useStyles = makeStyles(theme => ({
     },
     resumeContent: {
         position: "relative"
+    },
+    skillsImage: {
+        borderRadius: "5%",
+        height: "100px",
+        width: "auto",
+        objectFit: "cover"
     }
 }));
 
 const Resume = () => {
 
     const classes = useStyles(theme);
-
+    
     return (
         <div className="container-fluid">
             <Grid container spacing={3}>
@@ -57,7 +73,7 @@ const Resume = () => {
             </Grid>
             <Box mt={3}>
                 <Grid container spacing={3}>
-                    <Grid item lg={3} xl={2} component={Box} display={{ xs: 'none', sm: 'none', md: 'none', lg: 'block' }}>
+                    <Grid item lg={3} component={Box} display={{ xs: 'none', sm: 'none', md: 'none', lg: 'block' }}>
                         <Paper>
                             <Box p={3} pt={1}>
                                 <List
@@ -86,6 +102,12 @@ const Resume = () => {
                                         </ListItem>
                                     </Link>
 
+                                    <Link href="#skills" color="secondary">
+                                        <ListItem button>
+                                            <ListItemText primary="Technical skills" />
+                                        </ListItem>
+                                    </Link>
+
 
                                     <Link href="#leadership" color="secondary">
                                         <ListItem button>
@@ -102,7 +124,7 @@ const Resume = () => {
                             </Box>
                         </Paper>
                     </Grid>
-                    <Grid item md={12} lg={9} xl={10}>
+                    <Grid item md={12} lg={9}>
                         <Box className={classes.resumeBox}>
                             <Box mb={3} id="reference">
                                 <Grid container spacing={3}>
@@ -240,6 +262,51 @@ const Resume = () => {
                                                             <li>Perform statistical analysis on breath-analyzer data using MATLAB</li>
                                                         </ul>
                                                     </Typography>
+                                                </Box>
+                                            </Paper>
+                                        </Grid>
+                                </Grid>
+                            </Box>
+
+                            <Box mb={3} id="skills">
+                                <Grid container spacing={3}>
+                                    <Grid item xs={12}>
+                                            <Typography className={classes.sectionHeading} variant="h5" component="h3">
+                                                Technical skills 
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <Paper elevation={3} className={classes.resumeContent}>
+                                                <Box p={2}>
+                                                    <Grid container spacing={3} justify="center">
+                                                        <Grid item>
+                                                            <img className={classes.skillsImage} src={phpImage} alt="PHP logo"/>
+                                                        </Grid>
+                                                        <Grid item>
+                                                            <img className={classes.skillsImage} src={moodleImage} alt="Moodle logo"/>
+                                                        </Grid>
+                                                        <Grid item>
+                                                            <img className={classes.skillsImage} src={dockerImage} alt="Docker logo"/>
+                                                        </Grid>
+                                                        <Grid item>
+                                                            <img className={classes.skillsImage} src={laravelImage} alt="Laravel logo"/>
+                                                        </Grid>
+                                                        <Grid item>
+                                                            <img className={classes.skillsImage} src={javaScriptImage} alt="JavaScript logo"/>
+                                                        </Grid>
+                                                        <Grid item>
+                                                            <img className={classes.skillsImage} src={gitImage} alt="Git version control logo"/>
+                                                        </Grid>
+                                                        <Grid item>
+                                                            <img className={classes.skillsImage} src={mysqlImage} alt="MySQL logo"/>
+                                                        </Grid>
+                                                        <Grid item>
+                                                            <img className={classes.skillsImage} src={reactImage} alt="React logo"/>
+                                                        </Grid>
+                                                        <Grid item>
+                                                            <img className={classes.skillsImage} src={pythonImage} alt="Python logo"/>
+                                                        </Grid>
+                                                    </Grid>
                                                 </Box>
                                             </Paper>
                                         </Grid>
