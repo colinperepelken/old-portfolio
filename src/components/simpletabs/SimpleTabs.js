@@ -63,7 +63,7 @@ const SimpleTabs = () => {
           value={value} 
           onChange={handleChange} 
           aria-label="simple tabs example"
-          variant="scrollable"
+          variant="fullWidth"
           scrollButtons="off"
         >
           <Tab label="About" {...a11yProps(0)} />
