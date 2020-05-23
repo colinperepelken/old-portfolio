@@ -31,11 +31,6 @@ const Contact = () => {
 
     return (
         <Grid container direction="column" justify="center" alignItems="center">
-            <Grid item xs={12}>
-                <Box mb={2}>
-                    <Typography variant="h2">Contact</Typography>
-                </Box>
-            </Grid>
             <Grid item container direction="column" justify="center" alignItems="center" xs={12}>
                 <Paper elevation={2} className={classes.paper}>
                     <Box mb={4}>

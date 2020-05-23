@@ -7,7 +7,7 @@ import {
 const ProjectList = () => {
     return (
         <Grid container direction="column" justify="center" alignItems="center">
-            <Typography variant="h2">Projects</Typography>
+            <Typography variant="h2">TODO</Typography>
         </Grid>
     );
 }

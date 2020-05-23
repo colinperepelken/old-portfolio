@@ -78,11 +78,6 @@ const Resume = () => {
 
     return (
         <div className="container-fluid">
-            <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <Typography variant="h2" align="center">Resume</Typography>
-                </Grid>
-            </Grid>
             <Box mt={3}>
                 <Grid container spacing={3}>
                     <Grid item lg={3} component={Box} display={{ xs: 'none', sm: 'none', md: 'none', lg: 'block' }}>

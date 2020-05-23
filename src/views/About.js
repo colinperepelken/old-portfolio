@@ -41,11 +41,6 @@ const About = () => {
         return (
             <div className={classes.root}>
                 <Grid container spacing={3}>
-                    <Grid item xs={12}>
-                        <Box mb={2}>
-                            <Typography align="center" variant="h2" mb={4}>About</Typography>
-                        </Box>
-                    </Grid>
                     <Grid container justify="center" alignItems="center" item xs={12} sm={6}>
                         <img className={classes.profileImage} src={profileImage} alt="Colin's face" />
                     </Grid>
