@@ -1,5 +1,4 @@
 import ltiProviderImage from './assets/lti_provider.jpg';
-import wclnImage from './assets/lti_provider.jpg';
 import websiteImage from './assets/jay-mantri-TFyi0QOx08c-unsplash.jpg';
 import pythonRsaImage from './assets/python_rsa.png';
 
