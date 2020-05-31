@@ -5,24 +5,25 @@ import {
     Link,
     Box,
     Paper,
-    Icon
+    Icon,
+    GridList,
+    GridListTile
 } from "@material-ui/core";
 
 import profileImage from '../assets/bike_profile.jpg';
+import bearCreekImage from '../assets/bear_creek.jpg';
+import peaceSignImage from '../assets/peace_sign.jpg';
 
 import { theme } from "../theme";
 import { makeStyles } from "@material-ui/core/styles";
 import { githubLink, linkedinLink } from '../constants';
 
 const useStyles = makeStyles(theme => ({
-    profileImage: {
-        width: "100%",
-        height: "auto",
-        maxWidth: "600px",
-        borderRadius: "1%",
-    },
-    root: {
+    aboutBox: {
         flexGrow: 1,
+        maxWidth: "1400px",
+        marginLeft: "auto",
+        marginRight: "auto"
     },
     aboutSection: {
         marginBottom: "1em",
@@ -38,13 +39,35 @@ const useStyles = makeStyles(theme => ({
 const About = () => {
         const classes = useStyles(theme);
 
+        const tileData = [
+            {
+                img: profileImage,
+                title: "Colin's face",
+            },
+            {
+                img: bearCreekImage,
+                title: "Colin on a hike!",
+            },
+            {
+                img: peaceSignImage,
+                title: "Sitting on log near ocean",
+                cols: 2
+            },
+        ];
+
         return (
-            <div className={classes.root}>
-                <Grid container spacing={3}>
-                    <Grid container justify="center" alignItems="center" item xs={12} sm={6}>
-                        <img className={classes.profileImage} src={profileImage} alt="Colin's face" />
+            <Box className={classes.aboutBox}>
+                <Grid container spacing={3} alignItems="stretch">
+                    <Grid container justify="center" alignItems="center" item xs={12} sm={7}>
+                        <GridList cellHeight={220} className={classes.gridList} cols={2}>
+                            {tileData.map((tile) => (
+                                <GridListTile key={tile.img} cols={tile.cols || 1}>
+                                    <img src={tile.img} alt={tile.title} />
+                                </GridListTile>
+                            ))}
+                        </GridList>
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={5}>
                         <Paper elevation={3} className={classes.aboutPaper}>
                             <Box p={4}>
                                 <Typography className={classes.aboutSection} align="center">
@@ -82,7 +105,7 @@ const About = () => {
                         </Paper>
                     </Grid>
                 </Grid>
-            </div>
+            </Box>
         );
     
 }
