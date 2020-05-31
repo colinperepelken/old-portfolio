@@ -287,9 +287,9 @@ const Resume = () => {
                                                 <Box p={2}>
                                                     <Grid container spacing={3} justify="center">
 
-                                                        {skillsData.map((skill) => {
+                                                        {skillsData.map((skill, index) => {
                                                             return (
-                                                                <Grid item>
+                                                                <Grid item key={index}>
                                                                     <img className={classes.skillsImage} src={skill.src} alt={skill.alt}/>
                                                                 </Grid>
                                                             );

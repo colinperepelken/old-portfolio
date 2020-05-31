@@ -17,7 +17,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
     cardImage: {
-        height: 140
+        height: 200
     },
     projectsBox: {
         maxWidth: "1100px",
@@ -32,12 +32,12 @@ const ProjectList = () => {
 
     return (
         <Box className={classes.projectsBox}>
-            <Grid container justify="center" alignItems="center" spacing={3}>
-                {projectData.map((project) => {
+            <Grid container justify="center" spacing={3}>
+                {projectData.map((project, index) => {
                     return (
-                        <Grid item xs={12} sm={6} md={3}>
+                        <Grid item xs={12} sm={6} md={4} key={index} container alignItems="stretch">
                             <Card>
-                                <CardMedia 
+                                <CardMedia
                                     className={classes.cardImage}
                                     image={project.image}
                                     title={project.title}
@@ -55,7 +55,7 @@ const ProjectList = () => {
                                         View on GitHub
                                     </Button>
                                 </CardActions>
-                            </Card> 
+                            </Card>
                         </Grid>
                     );
                 })}
