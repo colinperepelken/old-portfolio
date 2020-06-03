@@ -5,7 +5,11 @@ import {
     Box,
     TextField,
     Button,
-    Paper
+    Paper,
+    Dialog,
+    DialogContent,
+    DialogContentText,
+    DialogActions
 } from "@material-ui/core"; 
 
 import { theme } from "../theme";
@@ -25,6 +29,8 @@ const Contact = () => {
     let state = {};
 
 
+    const [open, setOpen] = React.useState(false);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         window.console.log(state);
@@ -40,12 +46,21 @@ const Contact = () => {
             (response) => (response.json())
         ).then((response) => {
             if (response.status === 'success') {
-                alert('Message sent successfully!');
                 state = {};
             } else if (response.status === 'fail') {
                 alert('Failed to send message. You can email Colin directly at colin@perepelken.ca.');
             }
+
+            handleOpen();
         })
+    };
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
     };
 
     return (
@@ -62,8 +77,23 @@ const Contact = () => {
                         <Button type="submit" variant="contained" color="secondary">Submit</Button>
                     </form>
                 </Paper>
-
             </Grid>
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Message sent successfully!
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose} color="secondary">
+                        OK
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </Grid>
     );
 }
