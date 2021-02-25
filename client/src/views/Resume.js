@@ -22,6 +22,7 @@ import gitImage from '../assets/git.png';
 import mysqlImage from '../assets/mysql.png';
 import reactImage from '../assets/react.png';
 import pythonImage from '../assets/python.png';
+import vueImage from '../assets/vue.png';
 
 import { theme } from "../theme";
 import { makeStyles } from "@material-ui/core/styles";
@@ -74,6 +75,7 @@ const Resume = () => {
         {src: mysqlImage, alt: "MySQL logo"},
         {src: reactImage, alt: "React logo"},
         {src: pythonImage, alt: "Python logo"},
+        {src: vueImage, alt: "Vue.js logo"},
     ];
 
     return (
@@ -205,11 +207,13 @@ const Resume = () => {
                                                     <Typography component="div" color="textSecondary">
                                                         <ul>
                                                             <li>Moodle development (blocks, modules, themes, web services, etc...)</li>
-                                                            <li>Full-stack application development using the Laravel framework</li>
-                                                            <li>Integrating Moodle with other web applications using various authentication methods and APIs</li>
-                                                            <li>Managing software development projects end-to-end</li>
-                                                            <li>Using AWS, git version control, and Docker</li>
-                                                            <li>Providing support services for customer issues</li>
+                                                            <li>Integrating Moodle with other web applications using various authentication methods and APIs.</li>
+                                                            <li>Managing software development projects end-to-end.</li>
+                                                            <li>Configuring cloud infrastructure (AWS), Git VCS, and Docker.</li>
+                                                            <li>Custom full-stack application development using Laravel and Vue.js</li>
+                                                            <li>Providing Moodle support services to resolve customer issues.</li>
+                                                            <li>Write and manage documentation knowledge base.</li>
+                                                            <li>Facilitate video training sessions with Moodle administrators.</li>
                                                         </ul>
                                                     </Typography>
                                                 </Box>
@@ -223,9 +227,10 @@ const Resume = () => {
                                                     <Typography component="div" color="textSecondary">
                                                         <ul>
                                                             <li>Develop an LTI provider plugin to distribute course content to school districts across Western Canada. The provider handles millions of student requests for resources every year and has been integrated into Moodle, Canvas, and D2L</li>
-                                                            <li>Develop a Learning Object Repository (LOR) plugin to store and manage 3500+ games, projects, video tutorials, lessons and learning guides which can be embedded in courses</li>
+                                                            <li>Develop a Learning Object Repository (LOR) plugin to store and manage 5000+ games, projects, video tutorials, lessons and learning guides which can be embedded in courses</li>
                                                             <li>Develop a Game Creator local plugin used by teachers to create 180+ games which are included in courses to help teach various concepts</li>
                                                             <li>Develop 30+ educational HTML5/JavaScript games and media which are used by 51 BC school districts, the Yukon, and an Alberta division</li>
+                                                            <li>Build a Computer Science 11 course in line with the new BC curriculum.</li>
                                                         </ul>
                                                     </Typography>
                                                 </Box>

@@ -13,6 +13,9 @@ import {
 import profileImage from '../assets/bike_profile.jpg';
 import bearCreekImage from '../assets/bear_creek.jpg';
 import peaceSignImage from '../assets/peace_sign.jpg';
+import roseValleyImage from '../assets/rosevalley.jpg';
+import kvrImage from '../assets/kvr.jpg';
+import konaImage from '../assets/kona.jpg';
 
 import { theme } from "../theme";
 import { makeStyles } from "@material-ui/core/styles";
@@ -55,11 +58,29 @@ const About = () => {
             },
         ];
 
+        const tileData2 = [
+            {
+                img: roseValleyImage,
+                title: "Rose valley",
+                cols: 4
+            },
+            {
+                img: kvrImage,
+                title: "KVR",
+                cols: 2
+            },
+            {
+                img: konaImage,
+                title: "Kona mountain bike",
+                cols: 2
+            }
+        ]
+
         return (
             <Box className={classes.aboutBox}>
                 <Grid container spacing={3} alignItems="stretch">
                     <Grid container justify="center" alignItems="center" item xs={12} sm={7}>
-                        <GridList cellHeight={220} className={classes.gridList} cols={2}>
+                        <GridList cellHeight={245} className={classes.gridList} cols={2}>
                             {tileData.map((tile) => (
                                 <GridListTile key={tile.img} cols={tile.cols || 1}>
                                     <img src={tile.img} alt={tile.title} />
@@ -71,11 +92,11 @@ const About = () => {
                         <Paper elevation={3} className={classes.aboutPaper}>
                             <Box p={4}>
                                 <Typography className={classes.aboutSection} align="center">
-                                    I am very lucky to live in beautiful Kelowna, BC. I graduated from the University of British Columbia (Okanagan) in 2018 and have
+                                    I am very lucky to live in beautiful Kelowna, BC with my wonderful wife. I graduated from the University of British Columbia (Okanagan) in 2018 and have
                                     been enjoying my work as a software developer since.
                                 </Typography>
                                 <Typography className={classes.aboutSection} align="center">
-                                    I love to take a break from computer work by biking in the mountains around Kelowna, and canoeing on the many surrounding lakes.
+                                    I am an avid cyclist and love to spend my time outside work mountain biking in the hills, to the grocery store and to campgrounds around BC. I am passionate about travelling by bicycle and dream of being carless someday.
                                 </Typography>
                                 <Typography className={classes.aboutSection} align="center">
                                     I specialize in e-learning and Moodle development. I am currently working with <Link color="secondary" href="https://wcln.ca">Western Canadian Learning Network</Link> to provide
@@ -84,7 +105,7 @@ const About = () => {
                             </Box>
                             <Box>
                                 <Typography align="center">
-                                    Find out more about me:
+                                    <i>Follow me on:</i>
                                 </Typography>
                                 <Box mt={3}>
                                     <Grid container justify="center" spacing={3}>
@@ -103,6 +124,17 @@ const About = () => {
                                 </Box>
                             </Box>
                         </Paper>
+                    </Grid>
+                </Grid>
+                <Grid container spacing={3} alignItems="stretch">
+                    <Grid container justify="center" alignItems="center" item xs={12}>
+                        <GridList cellHeight={500} className={classes.gridList} cols={4}>
+                            {tileData2.map((tile) => (
+                                <GridListTile key={tile.img} cols={tile.cols || 1}>
+                                    <img src={tile.img} alt={tile.title} />
+                                </GridListTile>
+                            ))}
+                        </GridList>
                     </Grid>
                 </Grid>
             </Box>
