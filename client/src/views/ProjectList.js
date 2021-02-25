@@ -23,6 +23,12 @@ const useStyles = makeStyles(theme => ({
         maxWidth: "1100px",
         marginLeft: "auto",
         marginRight: "auto"
+    },
+    technologies: {
+        marginTop: "1rem"
+    },
+    buttons: {
+        marginBottom: "1rem"
     }
 }));
 
@@ -49,11 +55,19 @@ const ProjectList = () => {
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         {project.content}
                                     </Typography>
+                                    <Typography className={classes.technologies} variant="body2" color="textSecondary" component="p">
+                                        <i>Technologies: {project.technologies}</i>
+                                    </Typography>
                                 </CardContent>
-                                <CardActions>
-                                    <Button size="small" color="secondary" href={project.github}>
+                                <CardActions className={classes.buttons}>
+                                    <Button variant="contained" size="small" color="secondary" href={project.github}>
                                         View on GitHub
                                     </Button>
+                                    {project.hasOwnProperty('url') &&
+                                        <Button variant="contained" size="small" color="secondary" href={project.url}>
+                                            View Live
+                                        </Button>
+                                    }
                                 </CardActions>
                             </Card>
                         </Grid>

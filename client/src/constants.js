@@ -1,4 +1,6 @@
-import ltiProviderImage from './assets/lti_provider.jpg';
+import ltiImage from './assets/lti_dashboard.png';
+import lorImage from './assets/wcln_lor.png';
+import bikeGearsImage from './assets/bike_gears.png';
 import websiteImage from './assets/jay-mantri-TFyi0QOx08c-unsplash.jpg';
 import pythonRsaImage from './assets/python_rsa.png';
 
@@ -8,21 +10,40 @@ export const linkedinLink = "https://linkedin.com/in/colin-perepelken"
 
 export const projectData = [
     {
-        title: "LTI provider for Canadian school districts",
+        title: "LTI Provider for Canadian School Districts",
         content: "I developed an LTI provider plugin to distribute course content to school districts across Western Canada. The provider handles millions of student requests for resources every year and has been integrated into Moodle, Canvas, and D2L.",
-        image: ltiProviderImage,
+        technologies: 'Moodle, LTI, Vue.js, PHP',
+        image: ltiImage,
         github: 'https://github.com/wcln/moodle-local_lti'
     },
     {
-        title: "My personal website",
+        title: "Learning Object Repository",
+        content: "Created a Learning Object Repository (LOR) using Vue.js to store and manage 5000+ games, projects, video tutorials and other resources which can be embedded in courses by teachers to assist with online learning.",
+        technologies: 'Moodle, Vue.js, PHP',
+        image: lorImage,
+        github: 'https://github.com/wcln/moodle-local_lor',
+        url: 'https://wcln.ca/local/lor/index.php'
+    },
+    {
+        title: "Bike Gears",
+        content: "This site allows cyclists to compute gear ratios, gear inches and several other useful gearing calculations. The site provides charts, table data and insights. There is also a 'Learn' section where users can learn more about how bicycle gearing works.",
+        technologies: 'Vue.js, Bulma',
+        image: bikeGearsImage,
+        github: 'https://github.com/colinpereplken/bike-calculator',
+        url: 'https://bikegears.ca'
+    },
+    {
+        title: "My Personal Website",
         content: "I built this website from scratch as an excuse to learn ReactJS and Material UI.",
+        technologies: 'ReactJS, Material UI',
         image: websiteImage,
         github: 'https://github.com/colinperepelken/colin.perepelken.ca'
     },
     {
-        title: "Python RSA implementation",
+        title: "Python RSA Implementation",
         content: "A Python implementation of the RSA cryptosystem. Created for my own learning purposes. Capable of generating extremely simple and breakable (but functionally correct) public and private keys. These keys can be used from the command line to encrypt and decrypt files.",
+        technologies: 'Python',
         image: pythonRsaImage,
-        github: 'https://github.com/colinperepelken/python-rsa'
+        github: 'https://github.com/colinperepelken/python-rsa',
     },
 ];
