@@ -29,8 +29,8 @@ export const projectData = [
         content: "This site allows cyclists to compute gear ratios, gear inches and several other useful gearing calculations. The site provides charts, table data and insights. There is also a 'Learn' section where users can learn more about how bicycle gearing works.",
         technologies: 'Vue.js, Bulma',
         image: bikeGearsImage,
-        github: 'https://github.com/colinpereplken/bike-calculator',
-        url: 'https://bikegears.ca'
+        github: 'https://github.com/colinperepelken/bike-calculator',
+        url: 'http://bikegears.ca'
     },
     {
         title: "My Personal Website",
