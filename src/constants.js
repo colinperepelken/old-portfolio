@@ -10,6 +10,14 @@ export const linkedinLink = "https://linkedin.com/in/colin-perepelken"
 
 export const projectData = [
     {
+        title: "Bike Gears",
+        content: "This website allows cyclists to compute gear ratios, gear inches and several other useful calculations. It provides dynamic graphs, auto-generated insights, and table data to help users choose suitable gearing for their bikes. Users can compare results for multiple bikes at the same time, and can read more about each calculation by visiting the 'Learn' section.",
+        technologies: 'Vue.js, Bulma',
+        image: bikeGearsImage,
+        github: 'https://github.com/colinperepelken/bike-calculator',
+        url: 'http://bikegears.ca'
+    },
+    {
         title: "LTI Provider for Canadian School Districts",
         content: "I developed an LTI provider plugin to distribute courses to school districts across Western Canada. The provider handles millions of student requests for resources every year and has been integrated into Moodle, Canvas, and D2L.",
         technologies: 'Moodle, LTI, Vue.js, PHP',
@@ -23,14 +31,6 @@ export const projectData = [
         image: lorImage,
         github: 'https://github.com/wcln/moodle-local_lor',
         url: 'https://wcln.ca/local/lor/index.php'
-    },
-    {
-        title: "Bike Gears",
-        content: "This website allows cyclists to compute gear ratios, gear inches and several other useful calculations. It provides dynamic graphs, auto-generated insights, and table data to help users choose suitable gearing for their bikes. Users can compare results for multiple bikes at the same time, and can read more about each calculation by visiting the 'Learn' section.",
-        technologies: 'Vue.js, Bulma',
-        image: bikeGearsImage,
-        github: 'https://github.com/colinperepelken/bike-calculator',
-        url: 'http://bikegears.ca'
     },
     {
         title: "My Personal Website",
