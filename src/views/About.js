@@ -10,12 +10,9 @@ import {
     GridListTile
 } from "@material-ui/core";
 
-import profileImage from '../assets/bike_profile.jpg';
+import profileImage from '../assets/profile_tree.jpg';
 import bearCreekImage from '../assets/bear_creek.jpg';
 import peaceSignImage from '../assets/peace_sign.jpg';
-import roseValleyImage from '../assets/rosevalley.jpg';
-import kvrImage from '../assets/kvr.jpg';
-import konaImage from '../assets/kona.jpg';
 
 import { theme } from "../theme";
 import { makeStyles } from "@material-ui/core/styles";
@@ -58,24 +55,6 @@ const About = () => {
             },
         ];
 
-        const tileData2 = [
-            {
-                img: roseValleyImage,
-                title: "Rose valley",
-                cols: 4
-            },
-            {
-                img: kvrImage,
-                title: "KVR",
-                cols: 2
-            },
-            {
-                img: konaImage,
-                title: "Kona mountain bike",
-                cols: 2
-            }
-        ]
-
         return (
             <Box className={classes.aboutBox}>
                 <Grid container spacing={3} alignItems="stretch">
@@ -96,11 +75,11 @@ const About = () => {
                                     been enjoying my work as a software developer since.
                                 </Typography>
                                 <Typography className={classes.aboutSection} align="center">
-                                    I am an avid cyclist and love to spend my time outside work mountain biking in the hills, to the grocery store and to campgrounds around BC. I am passionate about travelling by bicycle and dream of being carless someday.
+                                    I am an avid cyclist and love to spend my time outside of work mountain biking in the hills, to the grocery store, and to campgrounds around BC. I am passionate about travelling by bicycle as a means to reduce my environmental impact.
                                 </Typography>
                                 <Typography className={classes.aboutSection} align="center">
                                     I specialize in e-learning and Moodle development. I am currently working with <Link color="secondary" href="https://wcln.ca">Western Canadian Learning Network</Link> to provide
-                                    courses to students in BC, and <Link color="secondary" href="https://lingellearning.com">Lingel Learning</Link> to develop custom online learning solutions for clients in Canada and Australia.
+                                    courses to Canadian students, and <Link color="secondary" href="https://lingellearning.com">Lingel Learning</Link> to develop custom online learning solutions for clients in Canada and Australia.
                                 </Typography>
                             </Box>
                             <Box>
@@ -113,7 +92,7 @@ const About = () => {
                                             <Link href={linkedinLink} className={classes.aboutLink} color="secondary">
                                                 <Icon className="fab fa-linkedin" fontSize="inherit"/>
                                             </Link>
-                                            
+
                                         </Grid>
                                         <Grid item>
                                         <Link href={githubLink} className={classes.aboutLink} color="secondary">
@@ -126,20 +105,9 @@ const About = () => {
                         </Paper>
                     </Grid>
                 </Grid>
-                <Grid container spacing={3} alignItems="stretch">
-                    <Grid container justify="center" alignItems="center" item xs={12}>
-                        <GridList cellHeight={500} className={classes.gridList} cols={4}>
-                            {tileData2.map((tile) => (
-                                <GridListTile key={tile.img} cols={tile.cols || 1}>
-                                    <img src={tile.img} alt={tile.title} />
-                                </GridListTile>
-                            ))}
-                        </GridList>
-                    </Grid>
-                </Grid>
             </Box>
         );
-    
+
 }
 
 export default About;
