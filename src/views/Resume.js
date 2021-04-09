@@ -93,9 +93,21 @@ const Resume = () => {
                                         </ListSubheader>
                                     }
                                 >
-                                    <Link href="#reference" color="secondary">
+                                    <Link href="#overview" color="secondary">
                                         <ListItem button>
-                                            <ListItemText primary="Most recent reference" />
+                                            <ListItemText primary="Overview" />
+                                        </ListItem>
+                                    </Link>
+
+                                    <Link href="#skills" color="secondary">
+                                        <ListItem button>
+                                            <ListItemText primary="Skills" />
+                                        </ListItem>
+                                    </Link>
+
+                                    <Link href="#experience" color="secondary">
+                                        <ListItem button>
+                                            <ListItemText primary="Experience" />
                                         </ListItem>
                                     </Link>
 
@@ -105,28 +117,22 @@ const Resume = () => {
                                         </ListItem>
                                     </Link>
 
-                                    <Link href="#experience" color="secondary">
+
+                                    <Link href="#technologies" color="secondary">
                                         <ListItem button>
-                                            <ListItemText primary="Work experience" />
+                                            <ListItemText primary="Technologies" />
                                         </ListItem>
                                     </Link>
 
-                                    <Link href="#skills" color="secondary">
+                                    <Link href="#reference" color="secondary">
                                         <ListItem button>
-                                            <ListItemText primary="Technical skills" />
+                                            <ListItemText primary="Most recent reference" />
                                         </ListItem>
                                     </Link>
 
-
-                                    <Link href="#leadership" color="secondary">
-                                        <ListItem button>
-                                            <ListItemText primary="Leadership &amp; teamwork" />
-                                        </ListItem>
-                                    </Link>
-    
                                 </List>
-                                
-                                <Button variant="contained" color="secondary">
+
+                                <Button variant="contained" color="secondary" href="http://colin.perepelken.ca/files/Colin%20Perepelken%20-%20Resume.pdf" target="_blank">
                                     <Icon className="fas fa-download" fontSize="small" style={{marginRight: "1rem"}}></Icon>
                                     Download resume
                                 </Button>
@@ -135,23 +141,18 @@ const Resume = () => {
                     </Grid>
                     <Grid item md={12} lg={9}>
                         <Box className={classes.resumeBox}>
-                            <Box mb={3} id="reference">
+                            <Box mb={3} id="overview">
                                 <Grid container spacing={3}>
                                     <Grid item xs={12}>
                                         <Typography className={classes.sectionHeading} variant="h5" component="h3">
-                                            Most recent reference
+                                            Overview
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={12}>
                                         <Paper elevation={3} className={classes.resumeContent}>
                                             <Box p={2}>
                                                 <Typography component="p" color="textSecondary">
-                                                    “Colin has been doing a fantastic job for WCLearningNetwork. His work has mainly
-                                                    focused on building educational games (HTML5) and developing Moodle plugins
-                                                    (php/mysql). Colin has jumped into his work with great attention to detail as well as
-                                                    excellent creativity when needed. I would definitely recommend Colin as a solid employee
-                                                    who is self-motivated, smart, and dependable. I realize that with his graduation coming, I'll
-                                                    likely lose him this year. Given that, WCLN has definitely benefited from his work.”
+                                                    An enthusiastic software developer with experience building applications to support Canadian school districts, and clients worldwide. Strives to create clean, concise code for real-world applications that make a difference.
                                                 </Typography>
                                             </Box>
                                         </Paper>
@@ -159,28 +160,45 @@ const Resume = () => {
                                 </Grid>
                             </Box>
 
-                            <Box mb={3} id="education">
+                            <Box mb={3} id="skills">
                                 <Grid container spacing={3}>
                                     <Grid item xs={12}>
                                             <Typography className={classes.sectionHeading} variant="h5" component="h3">
-                                                Education
+                                                Skills
                                             </Typography>
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Paper elevation={3} className={classes.resumeContent}>
                                                 <Box p={2}>
                                                 <Typography variant="h6" component="h4">
-                                                    BSc, Major in Computer Science, Minor in Mathematics
+                                                    Frontend web development
                                                 </Typography>
-                                                <Typography variant="subtitle2" component="h5">
-                                                    The University of British Columbia <span className={classes.resumeDate}>2014 - 2018</span>
+                                                <Typography component="div" color="textSecondary">
+                                                    Experience designing and developing dynamic user interfaces using Vue.js, ReactJS, JavaScript, Bulma, MaterialUI, and Bootstrap.
                                                 </Typography>
+                                                    <Typography variant="h6" component="h4">
+                                                        Backend development
+                                                    </Typography>
                                                     <Typography component="div" color="textSecondary">
-                                                        <ul className={classes.resumeList}>
-                                                            <li>Vice-President of the Quantitative Sciences Course Union <span className={classes.resumeDate}>2017 - 2018</span></li>
-                                                            <li>Internal Coordinator of the Quantitative Sciences Course Union <span className={classes.resumeDate}>2016 - 2017</span></li>
-                                                            <li>Dean's List <span className={classes.resumeDate}>2015</span></li>
-                                                        </ul>
+                                                        Developed an ecommerce site that integrates with Moodle, enrolmart.com, using the Laravel MVC framework while working with Lingel Learning.
+                                                    </Typography>
+                                                    <Typography variant="h6" component="h4">
+                                                        Database design & implementation
+                                                    </Typography>
+                                                    <Typography component="div" color="textSecondary">
+                                                        Strong knowledge of MySQL database design, and experience writing complex and efficient queries.
+                                                    </Typography>
+                                                    <Typography variant="h6" component="h4">
+                                                        Scalable infrastructure
+                                                    </Typography>
+                                                    <Typography component="div" color="textSecondary">
+                                                        Created a load-balanced infrastructure in AWS using services such as RDS, S3, EC2, ELB, and Elasticache.
+                                                    </Typography>
+                                                    <Typography variant="h6" component="h4">
+                                                        Other skills include:
+                                                    </Typography>
+                                                    <Typography component="div" color="textSecondary">
+                                                        Java, PHP, Postman, REST, JWT, Git, Python, Linux, Docker.
                                                     </Typography>
                                                 </Box>
                                             </Paper>
@@ -192,7 +210,7 @@ const Resume = () => {
                                 <Grid container spacing={3}>
                                     <Grid item xs={12}>
                                             <Typography className={classes.sectionHeading} variant="h5" component="h3">
-                                                Work experience
+                                                Experience
                                             </Typography>
                                         </Grid>
                                         <Grid item xs={12}>
@@ -202,18 +220,16 @@ const Resume = () => {
                                                         Senior Software Developer
                                                     </Typography>
                                                     <Typography variant="subtitle2" component="h5">
-                                                        Lingel Learning <span className={classes.resumeDate}>2019 - present</span>
+                                                        Lingel Learning <span className={classes.resumeDate}>Apr 2019 - present</span>
                                                     </Typography>
                                                     <Typography component="div" color="textSecondary">
                                                         <ul>
-                                                            <li>Moodle development (blocks, modules, themes, web services, etc...)</li>
-                                                            <li>Integrating Moodle with other web applications using various authentication methods and APIs.</li>
-                                                            <li>Managing software development projects end-to-end.</li>
-                                                            <li>Configuring cloud infrastructure (AWS), Git VCS, and Docker.</li>
-                                                            <li>Custom full-stack application development using Laravel and Vue.js</li>
-                                                            <li>Providing Moodle support services to resolve customer issues.</li>
-                                                            <li>Write and manage documentation knowledge base.</li>
-                                                            <li>Facilitate video training sessions with Moodle administrators.</li>
+                                                            <li>Moodle development (PHP, Vue.js, JavaScript) for client specific projects including APIs, themes, authentication, and custom reports.</li>
+                                                            <li>Built a SAAS Moodle solution using a load-balanced AWS infrastructure to manage client sites in Canada and Australia.</li>
+                                                            <li>Presented video training sessions, provided support services, and managed technical documentation for clients.</li>
+                                                            <li>Full stack application development using Laravel.</li>
+                                                            <li><b>Leadership skills:</b> Managed and mentored a Junior Developer. Involved in the hiring and interview process for multiple positions.</li>
+                                                            <li><b>Teamwork skills:</b> Facilitated work social gatherings, and “Teach something Thursday” to connect employees in Australia and Canada.</li>
                                                         </ul>
                                                     </Typography>
                                                 </Box>
@@ -222,15 +238,14 @@ const Resume = () => {
                                                         Software Developer
                                                     </Typography>
                                                     <Typography variant="subtitle2" component="h5">
-                                                        Western Canadian Learning Network <span className={classes.resumeDate}>2016 - present</span>
+                                                        Western Canadian Learning Network <span className={classes.resumeDate}>May 2016 - Sep 2020</span>
                                                     </Typography>
                                                     <Typography component="div" color="textSecondary">
                                                         <ul>
-                                                            <li>Develop an LTI provider plugin to distribute course content to school districts across Western Canada. The provider handles millions of student requests for resources every year and has been integrated into Moodle, Canvas, and D2L</li>
-                                                            <li>Develop a Learning Object Repository (LOR) plugin to store and manage 5000+ games, projects, video tutorials, lessons and learning guides which can be embedded in courses</li>
-                                                            <li>Develop a Game Creator local plugin used by teachers to create 180+ games which are included in courses to help teach various concepts</li>
-                                                            <li>Develop 30+ educational HTML5/JavaScript games and media which are used by 51 BC school districts, the Yukon, and an Alberta division</li>
-                                                            <li>Build a Computer Science 11 course in line with the new BC curriculum.</li>
+                                                            <li>Developed an LTI provider to distribute courses to school districts across Western Canada. The provider handles millions of student requests every year and has been integrated into Moodle, Canvas, and D2L.</li>
+                                                            <li>Created a Learning Object Repository using Vue.js to store and manage 5000+ games, projects, video tutorials, and learning guides.</li>
+                                                            <li>Developed a Game Creator used by teachers to create 200+ educational resources.</li>
+                                                            <li><b>Collaboration skills:</b> Worked with teachers to build a Computer Science 11 course in line with the updated BC education curriculum.</li>
                                                         </ul>
                                                     </Typography>
                                                 </Box>
@@ -239,39 +254,11 @@ const Resume = () => {
                                                         Software Developer
                                                     </Typography>
                                                     <Typography variant="subtitle2" component="h5">
-                                                        Latitude Geographics <span className={classes.resumeDate}>2018</span>
+                                                        Latitude Geographics <span className={classes.resumeDate}>May 2018 - Aug 2018</span>
                                                     </Typography>
                                                     <Typography component="div" color="textSecondary">
                                                         <ul>
-                                                            <li>Design and evelop customized web-GIS applications to client specifications using C#, .NET, and Typescript</li>
-                                                            <li>Write technical documentation and strict test cases to support software deployment</li>
-                                                        </ul>
-                                                    </Typography>
-                                                </Box>
-                                                <Box p={2}>
-                                                    <Typography variant="h6" component="h4">
-                                                        Undergraduate Academic Assistant
-                                                    </Typography>
-                                                    <Typography variant="subtitle2" component="h5">
-                                                        Department of Creative Studies, UBC Okanagan <span className={classes.resumeDate}>2018</span>
-                                                    </Typography>
-                                                    <Typography component="div" color="textSecondary">
-                                                        <ul>
-                                                            <li>Create a GIS mapping project template and database to record significant project activities and knowledge that has been produced as a result of the Border Free Bees initiative</li>
-                                                        </ul>
-                                                    </Typography>
-                                                </Box>
-                                                <Box p={2}>
-                                                    <Typography variant="h6" component="h4">
-                                                        Undergraduate Research Assistant
-                                                    </Typography>
-                                                    <Typography variant="subtitle2" component="h5">
-                                                        School of Engineering, UBC Okanagan <span className={classes.resumeDate}>2017</span>
-                                                    </Typography>
-                                                    <Typography component="div" color="textSecondary">
-                                                        <ul>
-                                                            <li>Extract features for the gas sensing project to better uniquely identify VOCs</li>
-                                                            <li>Perform statistical analysis on breath-analyzer data using MATLAB</li>
+                                                            <li>Designed and developed customized web-GIS applications to client specifications using C#, .NET, and Typescript</li>
                                                         </ul>
                                                     </Typography>
                                                 </Box>
@@ -280,11 +267,42 @@ const Resume = () => {
                                 </Grid>
                             </Box>
 
-                            <Box mb={3} id="skills">
+                            <Box mb={3} id="education">
+                                <Grid container spacing={3}>
+                                    <Grid item xs={12}>
+                                        <Typography className={classes.sectionHeading} variant="h5" component="h3">
+                                            Education
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Paper elevation={3} className={classes.resumeContent}>
+                                            <Box p={2}>
+                                                <Typography variant="h6" component="h4">
+                                                    BSc, Major in Computer Science, Minor in Mathematics
+                                                </Typography>
+                                                <Typography variant="subtitle2" component="h5">
+                                                    The University of British Columbia <span className={classes.resumeDate}>2014 - 2018</span>
+                                                </Typography>
+                                                <Typography component="div" color="textSecondary">
+                                                    <ul className={classes.resumeList}>
+                                                        <li>Vice-President of the Quantitative Sciences Course Union</li>
+                                                        <li>Dean's List</li>
+                                                        <li>Undergraduate Research Assistant - School of Engineering</li>
+                                                        <li>Undergraduate Academic Assistant - Department of Creative Studies</li>
+                                                        <li><b>Communication skills:</b> Presented multiple Git workshops and Java review sessions.</li>
+                                                    </ul>
+                                                </Typography>
+                                            </Box>
+                                        </Paper>
+                                    </Grid>
+                                </Grid>
+                            </Box>
+
+                            <Box mb={3} id="technologies">
                                 <Grid container spacing={3}>
                                     <Grid item xs={12}>
                                             <Typography className={classes.sectionHeading} variant="h5" component="h3">
-                                                Technical skills 
+                                                Technologies
                                             </Typography>
                                         </Grid>
                                         <Grid item xs={12}>
@@ -307,22 +325,18 @@ const Resume = () => {
                                 </Grid>
                             </Box>
 
-                            <Box mb={3} id="leadership">
+                            <Box mb={3} id="reference">
                                 <Grid container spacing={3}>
                                     <Grid item xs={12}>
                                             <Typography className={classes.sectionHeading} variant="h5" component="h3">
-                                                Leadership &amp; teamwork 
+                                                Most recent reference
                                             </Typography>
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Paper elevation={3} className={classes.resumeContent}>
                                                 <Box p={2}>
                                                     <Typography component="div" color="textSecondary">
-                                                        <ul className={classes.resumeList}>
-                                                            <li>Presented Git workshops <span className={classes.resumeDate}>2018, 2019, 2020</span></li>
-                                                            <li>Planned and organized $10,000 in funding to enable more than 20 UBC-O students to attend the Canadian Undergraduate Computer Science Conference and the Canadian Undergraduate Mathematics Conference <span className={classes.resumeDate}>2016, 2017</span></li>
-                                                            <li>Volunteered to promote computer science and math to high-school students through day-camps and visitations<span className={classes.resumeDate}>2017, 2018</span></li>
-                                                        </ul>
+                                                        <p>Colin has been doing a fantastic job for BCLearningNetwork. His work has mainly focused on building educational games (HTML5) and developing Moodle plugins (php/mysql). Colin has jumped into his work with great attention to detail as well as excellent creativity when needed. I would definitely recommend Colin as a solid employee who is self-motivated, smart, and dependable. I realize that with his graduation coming, I'll likely lose him this year. Given that, BCLN has definitely benefited from his work.</p>
                                                     </Typography>
                                                 </Box>
                                             </Paper>
