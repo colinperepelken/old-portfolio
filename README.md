@@ -1,6 +1,8 @@
 # perepelken.ca  
 
-My personal website. View live at [https://perepelken.ca](https://perepelken.ca)
+I built my personal website from scratch as an excuse to learn ReactJS and Material UI.
+
+View live at [https://perepelken.ca](https://perepelken.ca)
 
 ## Available Scripts
 
