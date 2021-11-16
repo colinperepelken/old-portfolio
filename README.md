@@ -1,6 +1,6 @@
-# colin.perepelken.ca  
+# perepelken.ca  
 
-My personal website.
+My personal website. View live at [https://perepelken.ca](https://perepelken.ca)
 
 ## Available Scripts
 
