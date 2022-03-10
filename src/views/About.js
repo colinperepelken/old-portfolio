@@ -50,7 +50,7 @@ const About = () => {
             },
             {
                 img: peaceSignImage,
-                title: "Sitting on log near ocean",
+                title: "Sitting on a log near ocean",
                 cols: 2
             },
         ];
@@ -71,15 +71,15 @@ const About = () => {
                         <Paper elevation={3} className={classes.aboutPaper}>
                             <Box p={4}>
                                 <Typography className={classes.aboutSection} align="center">
-                                    I am very lucky to live in beautiful Kelowna, BC with my wonderful wife. I graduated from the University of British Columbia (Okanagan) in 2018 and have
+                                    I am very lucky to live in beautiful Kelowna, BC with my wonderful wife and my energetic dog Goose. I graduated from the University of British Columbia (Okanagan) in 2018 and have
                                     been enjoying my work as a software developer since.
                                 </Typography>
                                 <Typography className={classes.aboutSection} align="center">
-                                    I am an avid cyclist and love to spend my time outside of work mountain biking in the hills, to the grocery store, and to campgrounds around BC. I am passionate about travelling by bicycle as a means to reduce my environmental impact.
+                                    I love riding my bike everywhere I can — to the grocery store, on camping trips, and mountain biking in the surrounding hills. I am passionate about bicycles and other alternative methods of transportation as means to improve the lives of others and to save the environment.
                                 </Typography>
                                 <Typography className={classes.aboutSection} align="center">
-                                    I specialize in e-learning and Moodle development. I am currently working with <Link color="secondary" href="https://wcln.ca">Western Canadian Learning Network</Link> to provide
-                                    courses to Canadian students, and <Link color="secondary" href="https://lingellearning.com">Lingel Learning</Link> to develop custom online learning solutions for clients in Canada and Australia.
+                                    I am currently working with <Link color="secondary" href="https://sparelabs.com">Spare</Link> to build the future of sustainable transportation. I am a software engineer on the <Link color="secondary" href="https://sparelabs.com/en/products/launch/overview/">Launch</Link> team, and 
+                                    work across the stack using Node.js, React, and TypeScript.
                                 </Typography>
                             </Box>
                             <Box>
