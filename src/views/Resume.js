@@ -66,6 +66,7 @@ const Resume = () => {
     const classes = useStyles(theme);
 
     const skillsData = [
+        {src: reactImage, alt: "React logo"},
         {src: phpImage, alt: "PHP logo"},
         {src: moodleImage, alt: "Moodle logo"},
         {src: dockerImage, alt: "Docker logo"},
@@ -73,7 +74,6 @@ const Resume = () => {
         {src: javaScriptImage, alt: "JavaScript logo"},
         {src: gitImage, alt: "Git logo"},
         {src: mysqlImage, alt: "MySQL logo"},
-        {src: reactImage, alt: "React logo"},
         {src: pythonImage, alt: "Python logo"},
         {src: vueImage, alt: "Vue.js logo"},
     ];
@@ -152,8 +152,7 @@ const Resume = () => {
                                         <Paper elevation={3} className={classes.resumeContent}>
                                             <Box p={2}>
                                                 <Typography component="p" color="textSecondary">
-                                                    An enthusiastic software developer with experience building applications to support Canadian school districts, and clients worldwide. Strives to create clean, concise code for real-world applications that make a difference.
-                                                </Typography>
+                                                An enthusiastic software developer, I enjoy diving into deep technical problems and developing robust solutions that improve the lives of others.                                                </Typography>
                                             </Box>
                                         </Paper>
                                     </Grid>
@@ -174,31 +173,31 @@ const Resume = () => {
                                                     Frontend web development
                                                 </Typography>
                                                 <Typography component="div" color="textSecondary">
-                                                    Experience designing and developing dynamic user interfaces using Vue.js, ReactJS, JavaScript, Bulma, MaterialUI, and Bootstrap.
+                                                    Experience developing dynamic user interfaces using React, Vue.js, TypeScript, Bulma, MaterialUI, and Bootstrap.
                                                 </Typography>
                                                     <Typography variant="h6" component="h4">
                                                         Backend development
                                                     </Typography>
                                                     <Typography component="div" color="textSecondary">
-                                                        Developed an ecommerce site that integrates with Moodle, enrolmart.com, using the Laravel MVC framework while working with Lingel Learning.
+                                                        Backend experience using Node.js to build RESTful microservices. Experience using PHP with the Laravel MVC framework.
                                                     </Typography>
                                                     <Typography variant="h6" component="h4">
                                                         Database design & implementation
                                                     </Typography>
                                                     <Typography component="div" color="textSecondary">
-                                                        Strong knowledge of MySQL database design, and experience writing complex and efficient queries.
+                                                        Strong knowledge of MySQL and PostgreSQL database design, and experience writing complex and efficient queries.
                                                     </Typography>
                                                     <Typography variant="h6" component="h4">
                                                         Scalable infrastructure
                                                     </Typography>
                                                     <Typography component="div" color="textSecondary">
-                                                        Created a load-balanced infrastructure in AWS using services such as RDS, S3, EC2, ELB, and Elasticache.
+                                                        Troubleshooting complex infrastructure problems in Kubernetes, Docker, and GCP as a part of the Site Reliability Engineering team.
                                                     </Typography>
                                                     <Typography variant="h6" component="h4">
                                                         Other skills include:
                                                     </Typography>
                                                     <Typography component="div" color="textSecondary">
-                                                        Java, PHP, Postman, REST, JWT, Git, Python, Linux, Docker.
+                                                        Java, AWS infrastructure, CircleCI, and Jest.
                                                     </Typography>
                                                 </Box>
                                             </Paper>
@@ -215,12 +214,29 @@ const Resume = () => {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Paper elevation={3} className={classes.resumeContent}>
+                                            <Box p={2}>
+                                                    <Typography variant="h6" component="h4">
+                                                        Software Engineer
+                                                    </Typography>
+                                                    <Typography variant="subtitle2" component="h5">
+                                                        Spare Labs Inc.<span className={classes.resumeDate}>July 2021 - present</span>
+                                                    </Typography>
+                                                    <Typography component="div" color="textSecondary">
+                                                        <ul>
+                                                            <li>Building the future of transportation using Node,js, TypeScript, React, PostgreSQL, Docker, Kubernetes and GCP.</li>
+                                                            <li>Primary on-call responder of the Site Reliability Engineering (SRE) team. Experience troubleshooting complex infrastructure issues.</li>
+                                                            <li>Designed and built Spare Apps infrastructure from scratch to allow third party integrators to extend core functionality.</li>
+                                                            <li><b>Teamwork skills:</b> Pair programming, reviewer of technical designs, onboarding new developers on to the Launch team as their buddy.</li>
+                                                            <li><b>Leadership skills:</b> Administer technical coding interviews, perform code reviews, lead post mortems following incidents and outages.</li>
+                                                        </ul>
+                                                    </Typography>
+                                                </Box>
                                                 <Box p={2}>
                                                     <Typography variant="h6" component="h4">
                                                         Senior Software Developer
                                                     </Typography>
                                                     <Typography variant="subtitle2" component="h5">
-                                                        Lingel Learning <span className={classes.resumeDate}>Apr 2019 - present</span>
+                                                        Lingel Learning <span className={classes.resumeDate}>Apr 2019 - May 2021</span>
                                                     </Typography>
                                                     <Typography component="div" color="textSecondary">
                                                         <ul>
@@ -228,8 +244,7 @@ const Resume = () => {
                                                             <li>Built a SAAS Moodle solution using a load-balanced AWS infrastructure to manage client sites in Canada and Australia.</li>
                                                             <li>Presented video training sessions, provided support services, and managed technical documentation for clients.</li>
                                                             <li>Full stack application development using Laravel.</li>
-                                                            <li><b>Leadership skills:</b> Managed and mentored a Junior Developer. Involved in the hiring and interview process for multiple positions.</li>
-                                                            <li><b>Teamwork skills:</b> Facilitated work social gatherings, and “Teach something Thursday” to connect employees in Australia and Canada.</li>
+                                                            <li><b>Leadership skills:</b> Managed and mentored Junior developers. Led interview sessions.</li>                                                        
                                                         </ul>
                                                     </Typography>
                                                 </Box>
@@ -242,7 +257,7 @@ const Resume = () => {
                                                     </Typography>
                                                     <Typography component="div" color="textSecondary">
                                                         <ul>
-                                                            <li>Developed an LTI provider to distribute courses to school districts across Western Canada. The provider handles millions of student requests every year and has been integrated into Moodle, Canvas, and D2L.</li>
+                                                            <li>Developed an LTI provider to distribute courses to school districts across Western Canada. The provider handles more than 20 million student requests every year and has been integrated into Moodle, Canvas, and D2L.</li>
                                                             <li>Created a Learning Object Repository using Vue.js to store and manage 5000+ games, projects, video tutorials, and learning guides.</li>
                                                             <li>Developed a Game Creator used by teachers to create 200+ educational resources.</li>
                                                             <li><b>Collaboration skills:</b> Worked with teachers to build a Computer Science 11 course in line with the updated BC education curriculum.</li>
@@ -258,7 +273,7 @@ const Resume = () => {
                                                     </Typography>
                                                     <Typography component="div" color="textSecondary">
                                                         <ul>
-                                                            <li>Designed and developed customized web-GIS applications to client specifications using C#, .NET, and Typescript</li>
+                                                            <li>Developed custom GIS workflow to client specifications using C# and TypeScript.</li>
                                                         </ul>
                                                     </Typography>
                                                 </Box>
