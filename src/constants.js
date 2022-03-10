@@ -14,8 +14,8 @@ export const projectData = [
         content: "This website allows cyclists to compute gear ratios, gear inches and several other useful calculations. It provides dynamic graphs, auto-generated insights, and table data to help users choose suitable gearing for their bikes. Users can compare results for multiple bikes at the same time, and can read more about each calculation by visiting the 'Learn' section.",
         technologies: 'Vue.js, Bulma',
         image: bikeGearsImage,
-        github: 'https://github.com/colinperepelken/bike-calculator',
-        url: 'http://bikegears.ca'
+        github: 'https://github.com/colinperepelken/bikegears',
+        url: 'https://bikegears.ca'
     },
     {
         title: "LTI Provider for Canadian School Districts",
