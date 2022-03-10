@@ -2,6 +2,7 @@ import ltiImage from './assets/lti_dashboard.png';
 import lorImage from './assets/wcln_lor.png';
 import bikeGearsImage from './assets/bike_gears.png';
 import websiteImage from './assets/jay-mantri-TFyi0QOx08c-unsplash.jpg';
+import blogImage from './assets/varun-yadav-QhYTCG3CTeI-unsplash.jpeg';
 import pythonRsaImage from './assets/python_rsa.png';
 
 export const githubLink = "https://github.com/colinperepelken";
@@ -38,6 +39,13 @@ export const projectData = [
         technologies: 'ReactJS, Material UI',
         image: websiteImage,
         github: 'https://github.com/colinperepelken/colin.perepelken.ca'
+    },
+    {
+        title: "Blog",
+        content: "A work in progress. Once complete, I plan on writing about bicycle travel, maintenance, and software development.",
+        technologies: 'ReactJS, TypeScript, Node.js',
+        image: blogImage,
+        github: 'https://github.com/colinperepelken/blog'
     },
     {
         title: "Python RSA Implementation",
