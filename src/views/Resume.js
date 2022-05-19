@@ -216,7 +216,7 @@ const Resume = () => {
                                             <Paper elevation={3} className={classes.resumeContent}>
                                             <Box p={2}>
                                                     <Typography variant="h6" component="h4">
-                                                        Software Engineer
+                                                        Senior Software Engineer
                                                     </Typography>
                                                     <Typography variant="subtitle2" component="h5">
                                                         Spare Labs Inc.<span className={classes.resumeDate}>July 2021 - present</span>
