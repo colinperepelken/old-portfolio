@@ -1,4 +1,7 @@
 # perepelken.ca  
+
+**This repository is deprecated! I have developed a new portfolio and blog at https://github.com/colinperepelken/blog**
+
 My personal portfolio website. Built from scratch using ReactJS and Material UI.
 
 View live at [https://perepelken.ca](https://perepelken.ca)
