@@ -1,4 +1,4 @@
-# perepelken.ca  
+# perepelken.ca (deprecated)
 
 **This repository is deprecated! I have developed a new portfolio and blog at https://github.com/colinperepelken/blog**
 
